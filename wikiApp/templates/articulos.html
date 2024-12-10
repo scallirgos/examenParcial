@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block titulo %}
+    Artículos
+{% endblock %}
+
+{% block contenido %}
+    <h2>Lista de Artículos</h2>
+    <ol>
+        {% for articuloInfo in articulosTotales %}
+        <br>
+        <li>
+            <ul>
+                <li>Título: {{articuloInfo.tituloArticulo}}</li>
+                <li>Descripción: {{articuloInfo.descripcionArticulo}}</li>
+                <li>Fecha: {{articuloInfo.fechaArticulo}}</li>
+                <li>Tema: {{articuloInfo.temaR.nombreTema}}</li>
+            </ul>
+        </li>
+        {% endfor %}        
+    </ol>
+{% endblock %}

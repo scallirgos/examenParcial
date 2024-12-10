@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block titulo %}
+    Tema: {{ objTema.nombreTema }}
+{% endblock %}
+
+{% block contenido %}
+    <h2>TEMA: {{ objTema.nombreTema }}</h2>
+    <div>
+        <h4>LISTA DE ARTÍCULOS</h4>
+        {% for articuloInfo in listaArticulos %}
+        <div>
+            <ul>
+                <li>{{ articuloInfo.tituloArticulo }}</li>
+                <li>{{ articuloInfo.fechaArticulo }}</li>
+            </ul>
+        </div>
+        <br>
+        {% endfor %}
+    </div> 
+{% endblock %}
